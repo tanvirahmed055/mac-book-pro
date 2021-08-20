@@ -14,25 +14,27 @@
 </head>
 
 <body>
-    <main>
+    <main class="px-5">
         <section>
-            <div class="container">
+            <div class="container pt-5 pb-4">
                 <div class="row gx-5">
                     <div class="col-4">
                         <img src="img/mac.png" class="img-fluid" alt="...">
 
                     </div>
                     <div class="col-6">
-                        <div>
-                            <h1>Customize your Red 24-inch</h1>
-                            <h1>iMac with Apple M1 chip.</h1>
-                            <p>Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores, 7-core
-                                GPU,
-                                and 16-core Neural Engine 8GB unified memory 256GB SSD storage Two Thunderbolt / USB 4
-                                ports Magic Mouse Magic Keyboard - US English</p>
+                        <div class="pb-3">
+                            <h3>Customize your Red 24-inch</h3>
+                            <h3>iMac with Apple M1 chip.</h3>
+                            <p><small>Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores,
+                                    7-core
+                                    GPU,
+                                    and 16-core Neural Engine 8GB unified memory 256GB SSD storage Two Thunderbolt / USB
+                                    4
+                                    ports Magic Mouse Magic Keyboard - US English</small></p>
                         </div>
-                        <div>
-                            <div>
+                        <div class="pb-3">
+                            <div class="pb-3">
                                 <h6>Memory</h6>
                                 <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                                     <input type="radio" class="btn-check" name="btnradio" id="btnradio1"
@@ -46,7 +48,7 @@
                                             memory</small></label>
                                 </div>
                             </div>
-                            <div>
+                            <div class="pb-3">
                                 <h6>Storage</h6>
                                 <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                                     <input type="radio" class="btn-check" name="btnradio2" id="btnradio3"
@@ -66,7 +68,7 @@
                                     </label>
                                 </div>
                             </div>
-                            <div>
+                            <div class="pb-3">
                                 <h6>Choose your delivery option</h6>
                                 <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                                     <input type="radio" class="btn-check" name="btnradio3" id="btnradio6"
@@ -84,10 +86,55 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="calculation">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <h5>Best Price </h5>
+                                    <h5>Extra Memory Cost</h5>
+                                    <h5>Extra Storage Cost</h5>
+                                    <h5>Delivery charge</h5>
+                                </div>
+
+                                <div class="col-md-7 status">
+                                    <h5>$<span id="best-price">1299</span></h5>
+                                    <h5>$<span id="extra-memory-cost">0</span></h5>
+                                    <h5>$<span id="extra-storage-cost">0</span></h5>
+                                    <h5>$<span id="delivery-charge">0</span></h5>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row pb-3">
+                                <div class="col-md-5">
+                                    <h5>Total</h5>
+                                </div>
+
+                                <div class="col-md-7 status">
+                                    <h5>$<span id="total-price">1299</span></h5>
+                                </div>
+                            </div>
+                            <div>
+                                <h6>Add Promo code</h6>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <input type="text">
+                                    </div>
+
+                                    <div class="col-md-7 status">
+                                        <button type="button" class="btn btn-success check-out">Apply</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
 
                 </div>
         </section>
+        <footer class="text-center">
+            <div class="col-md-12 py-4">
+                <h2>Total: $ <span>1299</span></h2>
+            </div>
+        </footer>
     </main>
     <!-- using bootstrap js via cdn -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
