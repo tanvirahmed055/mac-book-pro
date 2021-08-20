@@ -1,25 +1,29 @@
 const initialTotal = 1299;
+const initialExtraMemoryCost = 0;
+const initialStorageMemoryCost = 0;
+const initialDeliveryCost = 0;
+
 
 let memory8Gb = document.getElementById("btnradio1").addEventListener('click', function () {
     let extraMemCost = document.getElementById("extra-memory-cost");
-    let prevExtraMemCost = extraMemCost.innerText;
-    let newExtraMemCost = parseFloat(prevExtraMemCost) * 0;
+    let prevExtraMemCostText = extraMemCost.innerText;
+    let newExtraMemCostNumber = parseFloat(prevExtraMemCostText) * 0;
 
     let totalPrice = document.getElementById("total-price");
     let totalPriceCostText = totalPrice.innerText;
     let totalPriceCostNumber = parseFloat(totalPriceCostText);
 
-    let prevExtraStorageCost = document.getElementById("extra-storage-cost");
-    let prevExtraStorageCostText = prevExtraStorageCost.innerText;
-    let prevExtraStorageCostNumber = parseFloat(prevExtraStorageCostText);
+    let extraStorageCost = document.getElementById("extra-storage-cost");
+    let prevExtraStorageCostText = extraStorageCost.innerText;
+    let newExtraStorageCostNumber = parseFloat(prevExtraStorageCostText);
 
-    let prevExtraDeliveryCost = document.getElementById("delivery-charge");
-    let prevExtraDeliveryCostText = prevExtraDeliveryCost.innerText;
-    let prevExtraDeliveryCostNumber = parseFloat(prevExtraDeliveryCostText);
+    let extraDeliveryCost = document.getElementById("delivery-charge");
+    let prevExtraDeliveryCostText = extraDeliveryCost.innerText;
+    let newExtraDeliveryCostNumber = parseFloat(prevExtraDeliveryCostText);
 
-    if (newExtraMemCost == 0) {
-        extraMemCost.innerText = newExtraMemCost;
-        let newTotalPriceCostNumber = initialTotal + newExtraMemCost + prevExtraStorageCostNumber + prevExtraDeliveryCostNumber;
+    if (newExtraMemCostNumber == 0) {
+        extraMemCost.innerText = newExtraMemCostNumber;
+        let newTotalPriceCostNumber = initialTotal + newExtraMemCostNumber + newExtraStorageCostNumber + newExtraDeliveryCostNumber;
         totalPrice.innerText = newTotalPriceCostNumber;
 
     }
@@ -32,24 +36,24 @@ let memory8Gb = document.getElementById("btnradio1").addEventListener('click', f
 let memory16Gb = document.getElementById("btnradio2").addEventListener('click', function () {
 
     let extraMemCost = document.getElementById("extra-memory-cost");
-    let prevExtraMemCost = extraMemCost.innerText;
-    let newExtraMemCost = parseFloat(prevExtraMemCost) + 180;
+    let prevExtraMemCostText = extraMemCost.innerText;
+    let newExtraMemCostNumber = parseFloat(prevExtraMemCostText) + 180;
 
     let totalPrice = document.getElementById("total-price");
     let totalPriceCostText = totalPrice.innerText;
     let totalPriceCostNumber = parseFloat(totalPriceCostText);
 
-    let prevExtraStorageCost = document.getElementById("extra-storage-cost");
-    let prevExtraStorageCostText = prevExtraStorageCost.innerText;
-    let prevExtraStorageCostNumber = parseFloat(prevExtraStorageCostText);
+    let extraStorageCost = document.getElementById("extra-storage-cost");
+    let prevExtraStorageCostText = extraStorageCost.innerText;
+    let newExtraStorageCostNumber = parseFloat(prevExtraStorageCostText);
 
-    let prevExtraDeliveryCost = document.getElementById("delivery-charge");
-    let prevExtraDeliveryCostText = prevExtraDeliveryCost.innerText;
-    let prevExtraDeliveryCostNumber = parseFloat(prevExtraDeliveryCostText);
+    let extraDeliveryCost = document.getElementById("delivery-charge");
+    let prevExtraDeliveryCostText = extraDeliveryCost.innerText;
+    let newExtraDeliveryCostNumber = parseFloat(prevExtraDeliveryCostText);
 
-    if (newExtraMemCost == 180) {
-        extraMemCost.innerText = newExtraMemCost;
-        let newTotalPriceCostNumber = initialTotal + newExtraMemCost + prevExtraStorageCostNumber + prevExtraDeliveryCostNumber;
+    if (newExtraMemCostNumber == 180) {
+        extraMemCost.innerText = newExtraMemCostNumber;
+        let newTotalPriceCostNumber = initialTotal + newExtraMemCostNumber + newExtraStorageCostNumber + newExtraDeliveryCostNumber;
         totalPrice.innerText = newTotalPriceCostNumber;
 
     }
@@ -59,3 +63,90 @@ let memory16Gb = document.getElementById("btnradio2").addEventListener('click', 
 
 
 
+
+
+
+let storage256Gb = document.getElementById("btnradio3").addEventListener('click', function () {
+    let extraMemCost = document.getElementById("extra-memory-cost");
+    let prevExtraMemCostText = extraMemCost.innerText;
+    let newExtraMemCostNumber = parseFloat(prevExtraMemCostText);
+
+    let totalPrice = document.getElementById("total-price");
+    let totalPriceCostText = totalPrice.innerText;
+    let totalPriceCostNumber = parseFloat(totalPriceCostText);
+
+    let extraStorageCost = document.getElementById("extra-storage-cost");
+    let prevExtraStorageCostText = extraStorageCost.innerText;
+    let newExtraStorageCostNumber = parseFloat(initialStorageMemoryCost) * 0;
+
+    let extraDeliveryCost = document.getElementById("delivery-charge");
+    let prevExtraDeliveryCostText = extraDeliveryCost.innerText;
+    let newExtraDeliveryCostNumber = parseFloat(prevExtraDeliveryCostText);
+
+    if (newExtraStorageCostNumber == 0) {
+        extraStorageCost.innerText = newExtraStorageCostNumber;
+        let newTotalPriceCostNumber = initialTotal + newExtraMemCostNumber + newExtraStorageCostNumber + newExtraDeliveryCostNumber;
+        totalPrice.innerText = newTotalPriceCostNumber;
+
+    }
+
+});
+
+
+
+
+let storage512Gb = document.getElementById("btnradio4").addEventListener('click', function () {
+
+    let extraMemCost = document.getElementById("extra-memory-cost");
+    let prevExtraMemCostText = extraMemCost.innerText;
+    let newExtraMemCostNumber = parseFloat(prevExtraMemCostText);
+
+    let totalPrice = document.getElementById("total-price");
+    let totalPriceCostText = totalPrice.innerText;
+    let totalPriceCostNumber = parseFloat(totalPriceCostText);
+
+    let extraStorageCost = document.getElementById("extra-storage-cost");
+    let prevExtraStorageCostText = extraStorageCost.innerText;
+    let newExtraStorageCostNumber = parseFloat(initialStorageMemoryCost) + 100;
+
+    let extraDeliveryCost = document.getElementById("delivery-charge");
+    let prevExtraDeliveryCostText = extraDeliveryCost.innerText;
+    let newExtraDeliveryCostNumber = parseFloat(prevExtraDeliveryCostText);
+
+    if (newExtraStorageCostNumber == 100) {
+        extraStorageCost.innerText = newExtraStorageCostNumber;
+        let newTotalPriceCostNumber = initialTotal + newExtraMemCostNumber + newExtraStorageCostNumber + newExtraDeliveryCostNumber;
+        totalPrice.innerText = newTotalPriceCostNumber;
+
+    }
+
+});
+
+
+
+let storage1TB = document.getElementById("btnradio5").addEventListener('click', function () {
+
+    let extraMemCost = document.getElementById("extra-memory-cost");
+    let prevExtraMemCostText = extraMemCost.innerText;
+    let newExtraMemCostNumber = parseFloat(prevExtraMemCostText);
+
+    let totalPrice = document.getElementById("total-price");
+    let totalPriceCostText = totalPrice.innerText;
+    let totalPriceCostNumber = parseFloat(totalPriceCostText);
+
+    let extraStorageCost = document.getElementById("extra-storage-cost");
+    let prevExtraStorageCostText = extraStorageCost.innerText;
+    let newExtraStorageCostNumber = parseFloat(initialStorageMemoryCost) + 180;
+
+    let extraDeliveryCost = document.getElementById("delivery-charge");
+    let prevExtraDeliveryCostText = extraDeliveryCost.innerText;
+    let newExtraDeliveryCostNumber = parseFloat(prevExtraDeliveryCostText);
+
+    if (newExtraStorageCostNumber == 180) {
+        extraStorageCost.innerText = newExtraStorageCostNumber;
+        let newTotalPriceCostNumber = initialTotal + newExtraMemCostNumber + newExtraStorageCostNumber + newExtraDeliveryCostNumber;
+        totalPrice.innerText = newTotalPriceCostNumber;
+
+    }
+
+});
