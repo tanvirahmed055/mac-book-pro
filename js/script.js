@@ -188,6 +188,7 @@ document.getElementById("button-addon2").addEventListener('click', function () {
         let discountAmount = totalPriceCostNumber * 0.2;
         finalTotalPrice.innerText = totalPriceCostNumber - discountAmount;
         promoCode.value = "";
+
     }
 });
 
