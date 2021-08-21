@@ -11,7 +11,7 @@ const initialDeliveryCost = '0';
 let memory8Gb = document.getElementById("btnradio1").addEventListener('click', function () {
     let extraMemCost = document.getElementById("extra-memory-cost");
     let prevExtraMemCostText = extraMemCost.innerText;
-    let newExtraMemCostNumber = parseFloat(prevExtraMemCostText) * 0;
+    let newExtraMemCostNumber = parseFloat(initialExtraMemoryCost) + 0;
 
 
     let extraStorageCost = document.getElementById("extra-storage-cost");
@@ -86,7 +86,7 @@ let storage256Gb = document.getElementById("btnradio3").addEventListener('click'
 
     let extraStorageCost = document.getElementById("extra-storage-cost");
     let prevExtraStorageCostText = extraStorageCost.innerText;
-    let newExtraStorageCostNumber = parseFloat(initialStorageMemoryCost) * 0;
+    let newExtraStorageCostNumber = parseFloat(initialStorageMemoryCost) + 0;
 
     let extraDeliveryCost = document.getElementById("delivery-charge");
     let prevExtraDeliveryCostText = extraDeliveryCost.innerText;
@@ -186,7 +186,7 @@ let Delivery25Aug = document.getElementById("btnradio6").addEventListener('click
 
     let extraDeliveryCost = document.getElementById("delivery-charge");
     let prevExtraDeliveryCostText = extraDeliveryCost.innerText;
-    let newExtraDeliveryCostNumber = parseFloat(prevExtraStorageCostText) * 0;
+    let newExtraDeliveryCostNumber = parseFloat(initialDeliveryCost) + 0;
 
     let totalPrice = document.getElementById("total-price");
     let totalPriceCostText = totalPrice.innerText;
@@ -260,5 +260,10 @@ document.getElementById("button-addon2").addEventListener('click', function () {
 // =======================================
 // Without using functions ends
 // =======================================
+
+
+
+
+
 
 
