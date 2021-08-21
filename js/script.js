@@ -1,7 +1,7 @@
 const initialTotal = 1299;
-const initialExtraMemoryCost = 0;
-const initialStorageMemoryCost = 0;
-const initialDeliveryCost = 0;
+const initialExtraMemoryCost = '0';
+const initialStorageMemoryCost = '0';
+const initialDeliveryCost = '0';
 
 
 let memory8Gb = document.getElementById("btnradio1").addEventListener('click', function () {
@@ -210,7 +210,7 @@ let Delivery21Aug = document.getElementById("btnradio7").addEventListener('click
 
     let extraStorageCost = document.getElementById("extra-storage-cost");
     let prevExtraStorageCostText = extraStorageCost.innerText;
-    let newExtraStorageCostNumber = parseFloat(initialStorageMemoryCost);
+    let newExtraStorageCostNumber = parseFloat(prevExtraStorageCostText);
 
     let extraDeliveryCost = document.getElementById("delivery-charge");
     let prevExtraDeliveryCostText = extraDeliveryCost.innerText;
@@ -242,12 +242,12 @@ document.getElementById("button-addon2").addEventListener('click', function () {
     let totalPrice = document.getElementById("total-price");
     let totalPriceCostText = totalPrice.innerText;
     let totalPriceCostNumber = parseFloat(totalPriceCostText);
-    console.log(totalPriceCostNumber);
 
     let finalTotalPrice = document.getElementById("final-total");
 
     if (promoCodeText == "stevekaku") {
         let discountAmount = totalPriceCostNumber * 0.2;
         finalTotalPrice.innerText = totalPriceCostNumber - discountAmount;
+        promoCode.value = "";
     }
 });
