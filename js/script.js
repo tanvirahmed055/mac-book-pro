@@ -1,3 +1,7 @@
+// =======================================
+// Without using functions starts
+// =======================================
+
 const initialTotal = 1299;
 const initialExtraMemoryCost = '0';
 const initialStorageMemoryCost = '0';
@@ -41,7 +45,7 @@ let memory16Gb = document.getElementById("btnradio2").addEventListener('click', 
 
     let extraMemCost = document.getElementById("extra-memory-cost");
     let prevExtraMemCostText = extraMemCost.innerText;
-    let newExtraMemCostNumber = parseFloat(prevExtraMemCostText) + 180;
+    let newExtraMemCostNumber = parseFloat(initialExtraMemoryCost) + 180;
 
 
     let extraStorageCost = document.getElementById("extra-storage-cost");
@@ -178,11 +182,11 @@ let Delivery25Aug = document.getElementById("btnradio6").addEventListener('click
 
     let extraStorageCost = document.getElementById("extra-storage-cost");
     let prevExtraStorageCostText = extraStorageCost.innerText;
-    let newExtraStorageCostNumber = parseFloat(initialStorageMemoryCost);
+    let newExtraStorageCostNumber = parseFloat(prevExtraStorageCostText);
 
     let extraDeliveryCost = document.getElementById("delivery-charge");
     let prevExtraDeliveryCostText = extraDeliveryCost.innerText;
-    let newExtraDeliveryCostNumber = parseFloat(initialDeliveryCost) * 0;
+    let newExtraDeliveryCostNumber = parseFloat(prevExtraStorageCostText) * 0;
 
     let totalPrice = document.getElementById("total-price");
     let totalPriceCostText = totalPrice.innerText;
@@ -251,3 +255,10 @@ document.getElementById("button-addon2").addEventListener('click', function () {
         promoCode.value = "";
     }
 });
+
+
+// =======================================
+// Without using functions ends
+// =======================================
+
+
