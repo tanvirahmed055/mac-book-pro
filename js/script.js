@@ -230,3 +230,24 @@ let Delivery21Aug = document.getElementById("btnradio7").addEventListener('click
     }
 
 });
+
+
+
+
+
+document.getElementById("button-addon2").addEventListener('click', function () {
+    let promoCode = document.getElementById("promo-value");
+    let promoCodeText = promoCode.value;
+
+    let totalPrice = document.getElementById("total-price");
+    let totalPriceCostText = totalPrice.innerText;
+    let totalPriceCostNumber = parseFloat(totalPriceCostText);
+    console.log(totalPriceCostNumber);
+
+    let finalTotalPrice = document.getElementById("final-total");
+
+    if (promoCodeText == "stevekaku") {
+        let discountAmount = totalPriceCostNumber * 0.2;
+        finalTotalPrice.innerText = totalPriceCostNumber - discountAmount;
+    }
+});
